@@ -1,6 +1,7 @@
+from django.http import HttpResponse
+
+
+
+
 def hello(request):
-    print()
-    print(request)
-    print()
-    print(dir(request))
-    pass
+    return('<h1>Hello world! It is blog!</h1>')
