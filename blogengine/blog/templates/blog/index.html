@@ -1,7 +1,13 @@
 {% extends 'blog/base_blog.html' %}
 
-{% for name in names %}
+{% block title %}
+    Post list
+{% endblock %}
 
-    <h2>It is me, {{ name }}!</h2>
+{% block content %}
+
+    {% for name in names %}
+        <h2>It is me, {{ name }}!</h2>
+    {% endfor %}
     
-{% endfor %}
+{% endblock %}
