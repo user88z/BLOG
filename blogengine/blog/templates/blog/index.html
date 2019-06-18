@@ -5,9 +5,11 @@
 {% endblock %}
 
 {% block content %}
-
+    <h1 class="mb-5">Posts:</h1>
     {% for name in names %}
-        <h2>It is me, {{ name }}!</h2>
+        <p>
+            It is me, {{ name }}!
+        </p>
     {% endfor %}
-    
+
 {% endblock %}
