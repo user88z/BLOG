@@ -25,7 +25,14 @@ SECRET_KEY = 'tb8!4drao-ptlt=46ov35!sruy+_ny=o+^2$gikfzz19a&%rgz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.245.30']
+ALLOWED_HOSTS = [
+    '192.168.245.30',
+    'localhost',
+    '127.0.0.1'
+
+]
+
+
 # Application definition
 
 INSTALLED_APPS = [

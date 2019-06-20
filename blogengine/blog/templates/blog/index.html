@@ -1,15 +1,24 @@
-{% extends 'blog/base_blog.html' %}
+{% extends 'blog/base_blog.html' %}   <!Расширение шаблона blog/base_blog.html в папке templates/blog/>
 
-{% block title %}
+{% block title %}     <!Контент подставляемый в блок title>
     Post list
 {% endblock %}
 
-{% block content %}
+{% block content %}   <!Контент подставляемый в блок content>
     <h1 class="mb-5">Posts:</h1>
-    {% for name in names %}
-        <p>
-            It is me, {{ name }}!
-        </p>
+    {% for post in posts %}        <!Цикл вывода из базы данных>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                {{post.date_pub}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{Post.title}}</h5>
+                <p class="card-text">{{post.body|truncatewords:15}}</p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-light">Read</a>
+            </div>
+        </div>
+
     {% endfor %}
 
 {% endblock %}
