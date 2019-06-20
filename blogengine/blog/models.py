@@ -15,7 +15,7 @@ class Post(models.Model):                                                       
     
 
     def __str__(self):                                                           # Переопределение метода STR(вывод информации об объекте)
-        return '{}'.format(self.title)
+        return self.title
 
 
 class Tag(models.Model):
@@ -23,6 +23,6 @@ class Tag(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return self.title
 
 
