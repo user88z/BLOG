@@ -6,7 +6,7 @@
 
 {% block content %}   <!Контент подставляемый в блок content>
     <h1 class="mb-5">Posts:</h1>
-    {% for post in posts %}        <!Цикл вывода из базы данных>
+    {% for post in page_object.object_list %}        <!Цикл вывода из базы данных>
 
         <div class="card mb-4">
             <div class="card-header">
